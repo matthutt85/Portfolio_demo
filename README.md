@@ -1,2 +1,2 @@
 # Portfolio_demo
- A demo for building a portfolio
+ Built for Baltic Masterclass. 
