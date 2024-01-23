@@ -1,0 +1,68 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+@use '../components/' as *;
+
+//sections
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem; //10 rem on the sides
+    min-height: fit-content; // to make sure things are not overlapping and it fits nicely
+    .section__pic-container { //styling the image
+        display: flex;
+        height: 400px;
+        width: 400px;
+        margin: auto 0;
+    }
+}
+
+.section-container {
+    display: flex;
+}
+
+// profile section
+
+#profile {
+    display: flex; // fleixing and centering the section__pic-container div
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+    .section__pic-container { // styling the profile pic image
+        display: flex;
+        height: 400px;
+        margin: auto 0;
+    }
+    .section__text {
+        align-self: center;
+        text-align: center;
+        .section__text__p1 {
+            font-size: 1.75rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .title {
+            font-size: 3rem;
+            text-align: center;
+        }
+        .section__text__p2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .section__text p {
+        font-weight: 600;
+    }
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+
+
+

@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+#projects {
+    position: relative;
+}
+
+.color-container {
+    border-color: rgd(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title {
+    margin: 1rem;
+    color: $primary-black;
+}
+
+.about-containers {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}

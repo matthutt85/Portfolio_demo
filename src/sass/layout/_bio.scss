@@ -1,0 +1,63 @@
+@use '../abstracts/' as  *;
+
+.section__text__p1 { //possible mixin
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#about {
+    position: relative; // so that we can make the arrow absolute in its placement
+}
+
+.about-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .about-containers {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        .details-container {
+            padding: 1.5rem;
+            flex: 1;
+            background: $primary-white;
+            border-radius: 2rem;
+            border: $btn-border;
+            border-color: rgb(163, 163, 163);
+            text-align: center;
+        }
+    }
+}
+
+.about-pic { //about pic image
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem; // minus 5 from the right side of the page
+    bottom: 2.5rem; // 2.5rem up from the bottom
+}
+
+.section-container {
+    gap:4rem; // creates a gap between the image and the info
+    height: 80%; 
+    .section__pic-container { // not needed????
+        height: 400px;
+        width: 400px;
+        margin: auto 0;
+    }
+}
+
+
+
+
+
+

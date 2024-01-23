@@ -1,0 +1,119 @@
+@use '../abstracts/' as *;
+
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    .nav-links {
+        gap: 2rem; // rem means - relative size to the root element, if root el is 16px - 1rem = 16px
+        list-style: none; // remove default stylings
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .logo:hover {
+        cursor: default;
+    }
+}
+
+a {
+    color: $nav-text-color;
+    text-decoration: none; // removes styles
+    text-decoration-color: $primary-white; 
+ }
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+#hamburger-nav {
+    display: none;
+    .hamburger-menu {
+        position: relative;
+        display: inline-block;
+        .hamburger-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #hamburger-nav {
+        display: flex;
+    }
+}
+
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: $primary-black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top:100%;
+    right: 0;
+    background-color: $primary-white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $primary-black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out // going to move one side to the other
+}
+
+.menu-links li {
+    list-style: none; // removing list stylings
+}
+
+.menu-links.open {
+    max-height: 300px; //once this class is created from clicking the burger menu what is inside will happen
+}
+
+.hamburger-icon.open span:first-child { // first child is referring to the first span
+    transform: rotate(45deg) translate(10px, 5px); // we want to rotate the lines into an X but also move them along the X and Y
+}
+
+.hamburger-icon.open span:nth-child(2) { // nth child is referring to the second span
+    opacity: 0; // we are removing the 2nd child
+}
+
+.hamburger-icon.open span:last-child { // last child is referring to the first span
+    transform: rotate(-45deg) translate(10px, -5px); // we want to rotate the lines into an X but also move them along the X and Y
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}

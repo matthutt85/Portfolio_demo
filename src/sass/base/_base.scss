@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+  background-color: $primary-white;
+  font-family: $main-font;
+}
+
+html {
+  scroll-behavior: smooth; // when we select our links to different pages it will scroll smoothly to it rather than jumping
+}
+
+p {
+  color: $p-text;
+}
+
+a, .btn{
+  transition: all 300ms ease;
+}
+
+
+  
